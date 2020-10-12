@@ -1,0 +1,159 @@
+@import 'vars';
+@import 'fonts';
+@import 'global';
+
+
+
+.header__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	position: relative;
+}
+
+.box-left,
+.box-right{
+	max-width: 396px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menu{
+	display: flex;
+	align-items: center;
+	cursor: pointer;    
+}
+.menu__btn{	
+	color: $yellow;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 24px;
+	letter-spacing: 0.015em;
+}
+.feedback{
+	color: $blue;
+	letter-spacing: 0.015em;
+	font-weight: 700;
+	padding: 15px 19px;
+	border: 2px solid $blue;
+	border-radius: 7px;
+}
+.box-right{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+.address{
+	line-height: 125.9%;
+	letter-spacing: 0.015em;
+	width: 190px;
+}
+.contacts__phone{
+	color: $main-blue;	
+}
+.contacts__social{
+	text-align: right;
+	margin-top: 5px;
+}
+.contacts__social-link{
+	&+&{
+		margin-left: 13px;
+	}
+}
+.logo{
+	position: absolute;
+	top: -42px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 163px;
+	height: 163px;
+	border-radius: 50%;
+	background-color: #fff;
+	overflow: hidden;
+	text-align: center;	
+	&__img{
+		position: absolute;
+		bottom: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 70%;
+		object-fit: contain;	
+		
+	}
+}
+.preview{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+}
+.preview__inner{
+	padding-top: 170px;	
+	min-height: 815px;
+}
+.title{
+	font-weight: 900;
+	font-size: 99px;
+	line-height: 94px;
+	letter-spacing: 0.03em;
+	color: $white;
+	text-align: center;
+	margin-bottom: 80px;
+	span{
+		display: block;
+		font-size: 52px;
+		line-height: 55px;
+		letter-spacing: 0.015em;
+		font-weight: 400;
+	}
+}
+.preview__more{
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 100.8%;
+	letter-spacing: 0.03em;
+	color: $white;
+	padding-right: 116px;
+	position: relative;
+	&::before{
+		position: absolute;
+		content: '';
+		background-image: url('../images/more-circle.svg');
+		width: 83px;
+		height: 83px;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&::after{
+		position: absolute;
+		content: '';
+		background-image: url('../images/more-arrow.svg');
+		width: 67px;
+		height: 15px;
+		right: 41px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'media';
