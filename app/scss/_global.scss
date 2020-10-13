@@ -81,13 +81,25 @@ button{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-right: 16px;
+	margin-right: 16px;	
+	&.menu__gamburger--active{
+		.menu__gamburger-line--first{
+			transform: translateY(10px) rotate(-210deg);
+		}
+		.menu__gamburger-line--second{
+			opacity: 0;
+		}
+		.menu__gamburger-line--third{
+			transform: translateY(-13px) rotate(210deg);
+		}
+	}
 }
 .menu__gamburger-line{
 	height: 1px;
 	width: 100%; 
 	border-radius: 1px;
 	background-color: $yellow;
+	transition: all.3s;
 }
 .more{
 	text-align: right;

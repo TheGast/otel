@@ -137,7 +137,40 @@
 	}
 }
 
-
+.menu-box{
+	position: absolute;
+	background-color: $white;
+	top: 78px;
+	box-shadow: 0px 22px 20px -12px rgba(0, 0, 0, 0.11);
+	border-radius: 0px 0px 31px 31px;
+	padding: 37px 48px 50px 64px;
+	z-index: 5;
+	display: none;		
+}
+.menu-box__wrapper{
+	display: flex;
+}
+.menu-box__column{
+	color: $main-blue;
+	letter-spacing: 0.03em;
+	&+&{
+		margin-left: 45px;
+	}
+}
+.menu-box__title{
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+.menu-box__item{
+	margin: 8px 0;
+	font-weight: 500;
+	transition: all .3s;
+	&:hover{
+		color: $yellow;
+	}
+}
 
 
 
