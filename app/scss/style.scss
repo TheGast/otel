@@ -82,14 +82,50 @@
 		
 	}
 }
+.menu-box{
+	position: absolute;
+	background-color: $white;
+	top: 78px;
+	box-shadow: 0px 22px 20px -12px rgba(0, 0, 0, 0.11);
+	border-radius: 0px 0px 31px 31px;
+	padding: 37px 48px 50px 64px;
+	z-index: 5;
+	display: none;		
+}
+.menu-box__wrapper{
+	display: flex;
+}
+.menu-box__column{
+	color: $main-blue;
+	letter-spacing: 0.03em;
+	&+&{
+		margin-left: 45px;
+	}
+}
+.menu-box__title{
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+.menu-box__item{
+	margin: 8px 0;
+	font-weight: 500;
+	transition: all .3s;
+	&:hover{
+		color: $yellow;
+	}
+}
 .preview{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom center;
+	margin-bottom: 120px;
 }
 .preview__inner{
 	padding-top: 170px;	
 	min-height: 815px;
+	position: relative;
 }
 .title{
 	font-weight: 900;
@@ -137,43 +173,157 @@
 	}
 }
 
-.menu-box{
-	position: absolute;
+
+.preview__form{
+	padding: 35px 36px 40px;
 	background-color: $white;
-	top: 78px;
-	box-shadow: 0px 22px 20px -12px rgba(0, 0, 0, 0.11);
-	border-radius: 0px 0px 31px 31px;
-	padding: 37px 48px 50px 64px;
-	z-index: 5;
-	display: none;		
+	border-radius: 15px;
+	position: absolute;
+	bottom: -20px;
+	box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.05);
 }
-.menu-box__wrapper{
+.preview__form-button{
+	margin-left: 37px;
+}
+.preview__form-info{
+	position: absolute;
+	right: 27px;
+	bottom: 13px;
+	font-size: 12px;
+	line-height: 13px;
+	max-width: 221px;
+	text-align: center;
+	span{
+		font-weight: 600;
+	}
+}
+.preview__form-input{
+	border: none;
+}
+
+//about
+.about{
+	margin-bottom: 190px;
+}
+.about-title{
+	margin-bottom: 47px;
+}
+.about__content{
 	display: flex;
 }
-.menu-box__column{
-	color: $main-blue;
-	letter-spacing: 0.03em;
-	&+&{
-		margin-left: 45px;
-	}
+.about__text-wrapper{
+	max-width: 534px;
+	padding-bottom: 85px;
+	position: relative;
 }
-.menu-box__title{
-	font-size: 24px;
+.about__text{
 	line-height: 28px;
-	margin-bottom: 15px;
-	font-weight: 700;
+	letter-spacing: 0.02em;
+	margin: 10px 0;
 }
-.menu-box__item{
-	margin: 8px 0;
-	font-weight: 500;
-	transition: all .3s;
-	&:hover{
-		color: $yellow;
+.about__img{
+	max-width: 517px;
+	width: 100%;
+	height: 638px;
+	overflow: hidden;
+	margin-right: 83px;
+	img{
+		height: 100%;
+		object-position: -90px;
 	}
 }
 
+//product
+.product__inner{
+	padding-bottom: 109px;
+	position: relative;
+}
+.product-title{
+	margin-bottom: 19px;
+}
+.product__subtitle{
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 30px;
+	margin-bottom: 44px;
+}
+.product__item-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+.product__item{
+	position: relative;
+	padding-bottom: 47px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07);
+	border-radius: 32px;
+	max-width: 349px;
+	width: 100%;
+	text-align: center;	
+	background-color: $white;
+	transition: all .5s;
+	&::before {
+		content: '';
+		position: absolute;
+		top: -3px;
+		bottom: -3px;
+		left: -3px;
+		right: -3px;
+		border-radius: 32px;
+		background: linear-gradient(40deg,rgba(250,151,21,1) 3%,  transparent 40%, transparent 70%, rgba(250,151,21,1) 90%);
+		z-index: -1;	
+		opacity: 0;
+		transition: all .5s;
+	}	
+	&:hover{
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);		
+		&::before{
+			opacity: 1;
+		}
+	}
+}
 
-
+// background: rgb(250,151,21);
+// background: linear-gradient(34deg, rgba(250,151,21,1) 0%, rgba(250,151,21,0) 100%);
+.product__item-slider{
+	width: 100%;
+	height: 222px;
+	margin-bottom: 12px;	
+	border-radius: 32px 32px 0 0;
+	overflow: hidden;
+	img{
+		object-fit: cover;
+		width: 100%;
+		}
+}
+.product__item-title{
+	color: $yellow-sub;
+	font-size: 32px;
+	line-height: 118.9%;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.product__item-description{
+	font-size: 14px;
+	line-height: 105.9%;
+	margin-bottom: 31px;
+	padding: 0 7px;
+}
+.product__option-list{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 45px;
+	justify-content: center;
+}
+.product__option-item{
+	margin: 0 15px;
+	margin-bottom: 11px;
+}
+.product-button{
+	margin-top: 19px;
+	padding: 15px 15px;
+	font-size: 18px;
+	line-height: 118.4%;
+}
 
 
 

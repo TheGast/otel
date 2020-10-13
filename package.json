@@ -28,6 +28,7 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "jquery-form-styler": "^2.0.2",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
   }

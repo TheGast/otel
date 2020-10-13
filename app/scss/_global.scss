@@ -104,3 +104,59 @@ button{
 .more{
 	text-align: right;
 }
+.button{
+	background-color: $yellow;
+	padding: 18px 13px;
+	border-radius: 7px;
+	letter-spacing: 0.015em;
+	color: $white;
+	font-size: 22px;
+	line-height: 125.9%;
+	font-weight: 700;
+}
+.section-title{
+	font-size: 64px;
+	line-height: 103.3%;
+	letter-spacing: 0.03em;
+	font-weight: 800;
+	color: $main-blue;
+}
+.section-more__link{
+	position: absolute;
+	bottom: 24px;
+	right: 0;
+	padding-right: 112px;
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 100.8%;
+	letter-spacing: 0.03em;
+	color: $main-blue;
+	transition: all .3s;
+	&:hover{		
+		&::after{
+			right: 25px;
+		}
+	}
+	&::before{
+		position: absolute;
+		content: '';
+		background-image: url('../images/section-more-circle.svg');
+		width: 73px;
+		height: 73px;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);	
+		transition: all .3s;
+	}
+	&::after{
+		position: absolute;
+		content: '';
+		background-image: url('../images/section-more-arrow.svg');
+		width: 60px;
+		height: 14px;
+		right: 41px;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all .3s;		
+	}
+}
