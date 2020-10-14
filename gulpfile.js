@@ -24,11 +24,11 @@ gulp.task('scss',function(){
 
 //собираем все стили плагинов в один
 gulp.task('style', function(){
-    return gulp.src([
-        'node_modules/slick-carousel/slick/slick.css',
+    return gulp.src([        
         'node_modules/normalize.css/normalize.css',
         'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
         'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
+        'node_modules/swiper/swiper-bundle.css',
     ])
     .pipe(concat('libs.min.css'))
     .pipe(cssmin())
@@ -37,9 +37,9 @@ gulp.task('style', function(){
 
 //собираем все скрипты плагинов в один
 gulp.task('script', function(){
-    return gulp.src([
-        'node_modules/slick-carousel/slick/slick.js',
-        'node_modules/jquery-form-styler/dist/jquery.formstyler.js',        
+    return gulp.src([        
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+        'node_modules/swiper/swiper-bundle.js',        
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
