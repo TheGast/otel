@@ -174,3 +174,25 @@ button{
 	line-height: 30px;
 	color: $white;
 }
+.form__info{
+	position: absolute;
+	font-size: 12px;
+	line-height: 13px;
+	max-width: 221px;
+	span{
+		font-weight: 600;
+	}
+}
+.section-subtitle{
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+
+.swiper-container--main{
+	padding: 20px 0;	
+}
+.swiper-container--main{
+	overflow: hidden;
+}
