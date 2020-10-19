@@ -23,6 +23,12 @@ $('select').styler();
 //   loop: true,
 // });
 
+let mySwiperProduct = new Swiper('.swiper-container-product', {    
+ 
+  loop: true,
+ 
+});
+
 let mySwiper1 = new Swiper('.swiper-container-1', {    
   autoplay: {
     delay: 3000,
@@ -68,5 +74,64 @@ $('.faq__item-title').on('click', function(){
 $('.footer-column__title').on('click', function(){  
   $(this).siblings('.footer__list-item').slideToggle();
 });
-	
+
+$('.js-tab-trigger').on('click', function() {
+  var id = $(this).attr('data-tab'),
+      content = $('.js-tab-content[data-tab="'+ id +'"]');
+  
+  $('.js-tab-trigger.active').removeClass('active'); // 1
+  $(this).addClass('active'); // 2
+  
+  $('.js-tab-content.active').removeClass('active'); // 3
+  content.addClass('active'); // 4
+});
+  
+
+jQuery(function(){
+  var j = jQuery; //Just a variable for using jQuery without conflicts
+  var addInput = '#qty1'; //This is the id of the input you are changing
+  var n = 1; //n is equal to 1
+  
+  //Set default value to n (n = 1)
+  j(addInput).val(n);
+
+  //On click add 1 to n
+  j('.plus').on('click', function(){
+    j(addInput).val(++n);
+  })
+
+  j('.min').on('click', function(){
+    //If n is bigger or equal to 1 subtract 1 from n
+    if (n >= 1) {
+      j(addInput).val(--n);
+    } else {
+      //Otherwise do nothing
+    }
+  });
+});
+jQuery(function(){
+  var j = jQuery; //Just a variable for using jQuery without conflicts
+  var addInput = '#qty2'; //This is the id of the input you are changing
+  var n = 1; //n is equal to 1
+  
+  //Set default value to n (n = 1)
+  j(addInput).val(n);
+
+  //On click add 1 to n
+  j('.plus2').on('click', function(){
+    j(addInput).val(++n);
+  })
+
+  j('.min2').on('click', function(){
+    //If n is bigger or equal to 1 subtract 1 from n
+    if (n >= 1) {
+      j(addInput).val(--n);
+    } else {
+      //Otherwise do nothing
+    }
+  });
+});
+
+
+
 });
