@@ -22,12 +22,31 @@ $('select').styler();
 //   centeredSlides: true,
 //   loop: true,
 // });
+let mySwiperThumbs = new Swiper('.swiper-container-product--thumbs', {    
+ 
+  
+  
+  spaceBetween: 18,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        
+      },
+});
 
 let mySwiperProduct = new Swiper('.swiper-container-product', {    
- 
+  slidesPerView: 1,
+  spaceBetween: 30,
   loop: true,
+  thumbs: {
+    swiper: mySwiperThumbs
+  },
  
 });
+
 
 let mySwiper1 = new Swiper('.swiper-container-1', {    
   autoplay: {
