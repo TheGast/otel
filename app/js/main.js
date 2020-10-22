@@ -16,24 +16,26 @@ $(document).on('mouseup', function(e) {
 $('select').styler();  
 
 
-// let mySwiperMain = new Swiper('.swiper-container--main', {
-//   slidesPerView: 3,
-//   spaceBetween: 40,
-//   centeredSlides: true,
-//   loop: true,
-// });
-let mySwiperThumbs = new Swiper('.swiper-container-product--thumbs', {    
- 
-  
-  
-  spaceBetween: 18,
+let mySwiperMain = new Swiper('.product-content__review', {
+  slidesPerView: 1,  
+  spaceBetween: 28,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+let mySwiperThumbs = new Swiper('.swiper-container-product--thumbs', {     
+      spaceBetween: 18,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       scrollbar: {
-        el: '.swiper-scrollbar',
-        
+        el: '.swiper-scrollbar',        
       },
 });
 
