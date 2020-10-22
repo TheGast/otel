@@ -13,7 +13,7 @@ $(document).on('mouseup', function(e) {
   
 });
 
-$('select').styler();  
+$('select, checkbox').styler();  
 
 
 let mySwiperMain = new Swiper('.product-content__review', {
@@ -27,7 +27,11 @@ let mySwiperMain = new Swiper('.product-content__review', {
     el: '.swiper-pagination',
     type: 'bullets',
   },
+  observer: true,
+  observeParents: true,
 });
+
+
 let mySwiperThumbs = new Swiper('.swiper-container-product--thumbs', {     
       spaceBetween: 18,
       slidesPerView: 4,
@@ -37,6 +41,8 @@ let mySwiperThumbs = new Swiper('.swiper-container-product--thumbs', {
       scrollbar: {
         el: '.swiper-scrollbar',        
       },
+      observer: true,
+      observeParents: true,
 });
 
 let mySwiperProduct = new Swiper('.swiper-container-product', {    
@@ -46,6 +52,12 @@ let mySwiperProduct = new Swiper('.swiper-container-product', {
   thumbs: {
     swiper: mySwiperThumbs
   },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  observer: true,
+  observeParents: true,
  
 });
 
@@ -60,6 +72,8 @@ let mySwiper1 = new Swiper('.swiper-container-1', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+
 let mySwiper2 = new Swiper('.swiper-container-2', { 
    autoplay: {
     delay: 3000,
@@ -70,6 +84,8 @@ let mySwiper2 = new Swiper('.swiper-container-2', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+
 let mySwiper3 = new Swiper('.swiper-container-3', {
    autoplay: {
     delay: 3000,
@@ -81,12 +97,14 @@ let mySwiper3 = new Swiper('.swiper-container-3', {
   },
 });
 
+
 $(".reviews-item__rate").rateYo({
   rating: 5,
   starWidth: '20px',
   ratedFill: "#F8B41B",
   spacing: "10px"
 });
+
 
 $('.faq__item-title').on('click', function(){
   $(this).toggleClass('faq__item-title--active');
@@ -95,6 +113,7 @@ $('.faq__item-title').on('click', function(){
 $('.footer-column__title').on('click', function(){  
   $(this).siblings('.footer__list-item').slideToggle();
 });
+
 
 $('.js-tab-trigger').on('click', function() {
   var id = $(this).attr('data-tab'),
@@ -106,6 +125,7 @@ $('.js-tab-trigger').on('click', function() {
   $('.js-tab-content.active').removeClass('active'); // 3
   content.addClass('active'); // 4
 });
+
   
 
 jQuery(function(){
@@ -130,6 +150,8 @@ jQuery(function(){
     }
   });
 });
+
+
 jQuery(function(){
   var j = jQuery; //Just a variable for using jQuery without conflicts
   var addInput = '#qty2'; //This is the id of the input you are changing
@@ -151,6 +173,11 @@ jQuery(function(){
       //Otherwise do nothing
     }
   });
+});
+
+$('.product-item__top-button').on('click', function(){
+  $(this).parent().parent().siblings().slideToggle();
+  $(this).toggleClass('active');
 });
 
 
